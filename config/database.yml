@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: bookvar_db_admin
+  password: bookvar-db-pass
+  host: localhost
+  
+
+development:
+  <<: *default
+  database: bookvar_development
+
+
+test:
+  <<: *default
+  database: bookvar_test
+
+
