@@ -5,12 +5,13 @@ ruby "3.2.2"
 gem "rails", "~> 7.1.2"
 gem "puma", ">= 5.0"
 gem "pg", "~> 1.1"
+gem 'email_validator', require: 'email_validator/strict'
 
 gem 'devise'
 
 gem "bootsnap", require: false
 
-# front-end stack
+# front-end stackgem install email_validator
 gem "importmap-rails"
 gem "sassc-rails"
 gem "sprockets-rails"
