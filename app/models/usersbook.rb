@@ -1,0 +1,3 @@
+class Usersbook < ApplicationRecord
+  
+end

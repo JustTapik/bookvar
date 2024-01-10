@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
+  get 'admin', to: 'admin#index', as: :admin_page
+  get 'books_users/buy/:id', to: 'books_users#buy', as: :books_users_buy
+  get 'books_users/cancel/:id', to: 'books_users#cancel', as: :books_users_cancel
+  resources :books
   root 'home#index'
+
+
+  get 'home/profile', to: 'home#profile', as: :profile
+  get 'home/index'
+  get 'home/dashboard'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

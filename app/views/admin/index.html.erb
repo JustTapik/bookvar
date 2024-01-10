@@ -1,0 +1,18 @@
+<%= link_to 'Главная', books_path %>
+
+<h1>Админ</h1>
+
+<%= link_to 'Новая книга', new_book_path %>
+
+<h1>Все книги</h1>
+
+<div id="books">
+  <% @books.each do |book| %>
+    <%= render book %>
+    <p>
+      <%= link_to "Подробнее", book %>
+      <%= link_to "Редактировать", edit_book_path(book) %>
+      <%= button_to "Удалить книгу", book, method: :delete %>
+    </p>
+  <% end %>
+</div>

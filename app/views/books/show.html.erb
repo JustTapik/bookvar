@@ -1,0 +1,11 @@
+<%= render @book %>
+
+<div>
+  <% if @user_buy_current_book %>
+    <%= link_to "Вернуть", books_users_cancel_path(@book) %> |
+  <% else %>
+    <%= link_to "Купить", books_users_buy_path(@book) %> |
+<% end %>
+  <%= link_to "Вернуться ко всем книгам", books_path %>
+
+</div>
